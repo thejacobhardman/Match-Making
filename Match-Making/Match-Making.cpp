@@ -54,6 +54,9 @@ int main()
 				if (maxHeight <= 0) {
 					cout << "Please enter a valid height." << endl;
 				}
+				else if (maxHeight < minHeight) {
+					cout << "Maximum desired height must be greater than minimum desired height." << endl;
+				}
 				else {
 					break;
 				}
@@ -85,6 +88,9 @@ int main()
 				else if (maxAge > 100) {
 					cout << "Hey who am I to judge?" << endl;
 					break;
+				}
+				else if (maxAge < minAge) {
+					cout << "Maximum desired age must be greater than minimum desired age." << endl;
 				}
 				else {
 					break;
@@ -142,7 +148,7 @@ int main()
 					perfectMatches += 1;
 					cout << name << " is a perfect match!" << endl;
 				}
-				else if (matches < 5 && matches > 0 && genderMatch == true) {
+				else if (matches < 5 && matches > 1 && genderMatch == true) {
 					partialMatches += 1;
 					cout << name << " is a partial match!" << endl;
 				}
